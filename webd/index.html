@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>webdenmark opgave</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var url = "http://www.webdanmark.com/jobs/default.htm?jsoncallback=?";
+			//var url = "http://www.mackiespizza.dk/json.txt?jsoncallback=?";
+			var ajaxOptions = {
+			    url: url,
+			    type: "get",
+			    dataType: "json",
+			    success: function(data){
+			    	alert(data);
+			    	//console.log(data);
+			    }
+			   	//  beforeSend: function(xhr){
+			    //  xhr.withCredentials = false;
+			    //}
+			};
+
+			$.ajax(ajaxOptions);
+		});
+	</script>
+</head>
+
+<body>
+	<div class="result"></div>
+</body>
+</html>
